@@ -1,6 +1,11 @@
 body {
+    display: flex;
+    flex-direction: column;
     color: aliceblue;
     background-color: rgb(46, 64, 102);
+}
+ul {
+    border: 3px solid #fff;
 }
 ul li {
     list-style: none;
