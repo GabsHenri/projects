@@ -7,14 +7,16 @@ public class teste {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        double valor = sc.nextDouble(); // valor inserido
-        int[] notas = { 100, 50, 20, 10, 5, 2 }; // notas
+        double valor = sc.nextDouble(); // valor inserido pelo usuário
+        double[] valores = { 100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00, 0.50, 0.25, 0.10, 0.05, 0.01 };
 
-        int count = 0;
-        for (int i = 0; i < notas.length; i++) {
-            double q = (valor / notas[i]);
-            System.out.println((int) q);
-            valor -= (q * notas[i]);
+        for (int i = 0; i < valores.length; i++) {
+            int quantidade = (int) (valor / valores[i]);
+            valor -= quantidade * valores[i];
+
+            if (quantidade > 0) {
+                System.out.println(quantidade);
+            }
         }
 
         sc.close();
